@@ -1,0 +1,76 @@
+{
+  "name": "femonitor",
+  "version": "1.0.0",
+  "description": "fetmonitor",
+  "main": "app.js",
+  "scripts": {
+    "ava": "node ./node_modules/ava/cli",
+    "apitest": "node ./node_modules/ava/cli ./test/api.js",
+    "sptest": "node ./node_modules/ava/cli ./test/sitespeed.js",
+    "setest": "node ./test/sendEmail.js",
+    "app": "node ./node_modules/nodemon/bin/nodemon.js app.js",
+    "localdev": "NODE_ENV=localdev gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.intra.gomeplus.com/gomeplusFED/FEMonitor.git"
+  },
+  "keywords": [
+    "front-end",
+    "monitor"
+  ],
+  "config": {
+    "port": 8088
+  },
+  "author": "zhangzhao",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.11.0",
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.1",
+    "emailjs": "^1.0.5",
+    "express": "^4.14.0",
+    "gome-sitespeed.io": "^1.0.4",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-if": "^2.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev-hash": "0.0.2",
+    "gulp-uglify": "^2.0.0",
+    "json-loader": "^0.5.4",
+    "lactate": "^0.13.12",
+    "later": "^1.2.0",
+    "lodash": "^4.14.2",
+    "log4js": "^0.6.38",
+    "minimist": "^1.2.0",
+    "mongoose": "^4.5.8",
+    "superagent": "^2.1.0",
+    "vue": "^1.0.26",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "^8.5.3",
+    "vue-resource": "^0.9.3",
+    "vue-router": "^0.7.13",
+    "vue-strap": "^1.0.11",
+    "webpack": "^1.13.1",
+    "webpack-stream": "^3.2.0"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "babel-cli": "^6.5.1",
+    "nodemon": "^1.9.0"
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ],
+    "babel": {
+      "babelrc": true
+    }
+  }
+}

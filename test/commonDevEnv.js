@@ -1,0 +1,7 @@
+import test from 'ava';
+var randomstring = require("randomstring");
+process.env.NODE_ENV='dev';
+let port=8+randomstring.generate({length: 3,charset: 'numeric'});
+process.env.npm_package_config_port=port;
+require('../app');
+module.exports={test,port};

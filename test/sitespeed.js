@@ -1,5 +1,5 @@
 import {run} from 'gome-sitespeed.io'
-import {runSitespeedTask} from '../lib/sitespeed'
+import {runSitespeedTask} from '../module/lib/sitespeed'
 import test from 'ava';
 require('../app');
 

@@ -1,5 +1,14 @@
 {
   "server_ip": "mongodb://127.0.0.1:27017/sitespeed",
   "server_coll": "speedinfos",
-  "sitespeedpath": ""
+  "sitespeedpath": "/Users/zhangmike/test/data/",
+  "pdfpath":"/Users/zhangmike/test/data/",
+  "pdfweekpath":"/Users/zhangmike/test/data/weekpdf/",
+  "emailName":"femonitor",
+  "emailPassword":"T<n>@P.0}xG?5tEs",
+  "emailHost":"mail.gomeplus.com",
+  "emailFrom":"femonitor@gomeplus.com",
+  "sendUsers":[
+    "zhangzhao@gomeplus.com"
+  ]
 }

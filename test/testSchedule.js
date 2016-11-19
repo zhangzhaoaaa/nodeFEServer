@@ -3,8 +3,12 @@
  */
 var schedule = require('../router/schedule');
 
-schedule.scheduleDayStart();
+schedule.scheduleDayStart('at 17:30',function() {
+	console.log("dddddddddddd");
+});
 
-setTimeout(function(){
+/*setTimeout(function(){
+	console.log('before..',global.scheduleDayTimer)
 	schedule.scheduleDayClose();
-},1000 * 20);
+	schedule.scheduleDayStart('every 1 s');
+},1000 * 20);*/

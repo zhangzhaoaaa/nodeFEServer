@@ -4,4 +4,6 @@ node_modules/
 logs/
 log/
 dist/
-npm-debug.log
+views/static/
+test/api/views/
+npm-debug*

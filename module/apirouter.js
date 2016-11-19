@@ -2,7 +2,7 @@ import  path from 'path';
 import express from 'express';
 let apiRouter = express.Router();
 
-import {getDirModule} from '../lib/fsUtil';
+import {getDirModule} from './lib/fsutil';
 
 let api=getDirModule(path.join(__dirname,'/api'));
 

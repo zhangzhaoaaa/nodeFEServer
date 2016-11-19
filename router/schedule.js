@@ -2,26 +2,24 @@
  * Created by zhangmike on 16/8/8.
  */
 var  later  = require('later');
-var scheduleDayTimer = null,
-	scheduleWeekEmailTimer = null;
+later.date.localTime();
 
-var scheduleDayStart = function() {
-	var textSched = later.parse.text('every 5 s');
+var scheduleDayStart = function(rule) {
 
-	// execute logTime one time on the next occurrence of the text schedule
+	var textSched = later.parse.text(rule);
 
-	// execute logTime for each successive occurrence of the text schedule
-	scheduleDayTimer = later.setInterval(logTime, textSched);
+	global.scheduleDayTimer = later.setInterval(logTime, textSched);
 
 	// function to execute
 	function logTime() {
 		console.log(new Date());
 	}
 };
+
 var scheduleDayClose = function() {
 	// clear the interval timer when you are done
-	if (scheduleDayTimer) {
-		scheduleDayTimer.clear();
+	if (global.scheduleDayTimer) {
+		global.scheduleDayTimer.clear();
 	}
 };
 var scheduleWeekEmailStart = function() {
@@ -31,7 +29,7 @@ var scheduleWeekEmailStart = function() {
 	//var timer = later.setTimeout(logTime, textSched);
 
 	// execute logTime for each successive occurrence of the text schedule
-	//scheduleWeekEmailTimer = later.setInterval(logTime, textSched);
+	//global.scheduleWeekEmailTimer = later.setInterval(logTime, textSched);
 
 	// function to execute
 	function logTime() {
@@ -40,7 +38,7 @@ var scheduleWeekEmailStart = function() {
 };
 var scheduleWeekEmailClose = function() {
 	// clear the interval timer when you are done
-	scheduleWeekEmailTimer.clear();
+	global.scheduleWeekEmailTimer.clear();
 };
 module.exports = {scheduleDayStart, scheduleWeekEmailStart,
 	scheduleDayClose, scheduleWeekEmailClose};

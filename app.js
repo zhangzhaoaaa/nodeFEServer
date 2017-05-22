@@ -14,6 +14,6 @@ var PORT = process.env.npm_package_config_port || 8088;
 middlewareCommon(app);
 
 app.listen(PORT, () =>{
-	init.default(PORT);
+	// init.default(PORT);
 });
 console.log(`the server is listen on ${PORT}`);
